@@ -5,8 +5,7 @@
   "license": "Apache Version 2.0",
   "scripts": {
 	"start": "node ${SCRIPT:-app.js}",
-	"deploy": "gcloud preview app deploy app.yaml --promote",
-	"postinstall": "bower install --config.interactive=false"
+	"deploy": "gcloud preview app deploy app.yaml --promote"
   },
   "dependencies": {
 	"express": "~4.10.1",
