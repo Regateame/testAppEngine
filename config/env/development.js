@@ -2,10 +2,24 @@
 
 module.exports = {
 	db: {
-		uri: 'mongodb://localhost/mean-dev',
+		uri: 'mongodb://10.240.0.4/mean-dev',
 		options: {
 			user: '',
-			pass: ''
+			pass: '',
+			replset: {
+				socketOptions: {
+					keepAlive: 1,
+					connectTimeoutMS: 300000
+				},
+				readPreference: 'nearest',
+				rs_name: 'rs0'
+			},
+			server: {
+				socketOptions: {
+					keepAlive: 1,
+					connectTimeoutMS: 120000
+				}
+			}
 		}
 	},
 	log: {
